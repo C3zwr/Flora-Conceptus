@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar | Flora Conceptus</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="auth">
+    <div class="backdrop" data-sidebar-close></div>
+    <button class="sidebar-tab" data-sidebar-toggle aria-label="Abrir menu"><span aria-hidden="true">☰</span><span>MENU</span></button>
+
+    <aside class="sidebar" data-sidebar>
+      <div class="side-head"><a class="side-title" href="index.html">Flora Conceptus</a><button data-sidebar-close aria-label="Fechar menu">‹</button></div>
+      <div class="side-nav">
+        <p class="kicker">Navegação</p>
+        <a class="side-btn" href="index.html">Início</a>
+        <a class="side-btn" href="index.html#flor-do-dia">Destaque do Dia</a>
+        <a class="side-btn" href="colecao.html">Coleção Completa</a>
+      </div>
+      <div class="flower-list" data-flower-nav><p class="kicker">Espécies A-Z</p></div>
+      <div class="side-foot">35 espécies catalogadas</div>
+    </aside>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html" aria-label="Flora Conceptus"><span>Flora Conceptus</span></a>
+        <form class="header-search" data-global-search><span class="search-icon">⌕</span><input name="q" type="search" placeholder="Buscar por nome, propriedade ou origem" /></form>
+        <a class="login-btn" href="auth.html">Entrar / Criar conta</a>
+      </div>
+    </header>
+
+    <main class="auth-page">
+      <section class="auth-modal auth-panel">
+        <div class="auth-left">
+          <div><span class="auth-brand">Flora Conceptus</span></div>
+          <div><h2>Uma enciclopédia<br />das flores do mundo.</h2><p>Explore origens, simbolismos e histórias de espécies fascinantes.</p></div>
+          <p>© 2026 Flora Conceptus</p>
+        </div>
+        <div class="auth-form">
+          <div class="tabs">
+            <button class="tab active" data-auth-mode="login">Entrar</button>
+            <button class="tab" data-auth-mode="signup">Criar conta</button>
+          </div>
+          <button class="google-btn" data-auth-success>Entrar com Google</button>
+          <form data-auth-form>
+            <div class="form-row signup-only" hidden><input id="name" placeholder="Nome de usuário" /></div>
+            <div class="form-row"><input id="email" type="email" placeholder="E-mail" /></div>
+            <div class="form-row signup-only" hidden><input id="phone" type="tel" placeholder="Celular (com DDD)" /></div>
+            <div class="form-row"><input id="password" type="password" maxlength="8" placeholder="Senha" /><button class="password-toggle" type="button" data-password-toggle>◉</button></div>
+            <ul class="rules"><li>1 letra maiúscula</li><li>1 letra minúscula</li><li>1 caractere especial</li><li>até 8 caracteres</li></ul>
+            <p class="error" data-auth-error></p>
+            <button class="submit-btn" type="submit" data-auth-submit>Entrar</button>
+          </form>
+          <p class="muted auth-switch"><span data-auth-switch-label>Novo por aqui?</span> <button data-auth-switch>Crie sua conta</button></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="flowers.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
